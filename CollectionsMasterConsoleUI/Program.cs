@@ -167,14 +167,17 @@ namespace CollectionsMasterConsoleUI
 
         private static void NumberChecker(List<int> numberList, int searchNumber)
         {
+            bool numberFound = false;
             Console.WriteLine("checking your number....");
             foreach (int number in numberList) {
                 if (number == searchNumber)
                 {
                     Console.WriteLine($"Your number {searchNumber} was found in the list!");
+                    numberFound = true;
                     break;
                 }               
             }
+            if (numberFound==false) { Console.WriteLine("Your number was not found."); }
         }
 
         private static void Populater(List<int> numberList)
